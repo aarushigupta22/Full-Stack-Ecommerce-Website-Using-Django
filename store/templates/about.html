@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="header">
+  <div class="header-content">
+    <h1>About The Artist</h1>
+  </div>
+</header>
+<section class="about-us">
+  <div class="about">
+    <img src="{% static 'artist.jpeg' %}" class="pic" alt="Profile Picture"/>
+    <div class="text-container">
+      <div class="text">
+        <h2>Mridul Garg</h2>
+        <h5>Founder and <span>Artist</span></h5>
+        <div class="text-box">
+          <p>Mridul Garg is an accomplished and trained artist hailing from India, whose works have garnered praise and recognition in numerous national and international group exhibitions. With a portfolio spanning various mediums including oil, acrylic, and watercolors, Mridul specializes in both large-scale and intimate paintings, collaborating closely with clients and interior designers to craft bespoke pieces. Their artistic journey is marked by a profound connection to nature, evident in their evocative landscapes, portraits, and theme-based compositions. Rooted in a deep appreciation for the beauty and complexity of the world, Mridul infuses each artwork with heartfelt messages and an aura of positive energy, reflecting the rich tapestry of human emotions and experiences. Drawing inspiration from travels across diverse landscapes and cultures, Mridul's paintings resonate with a sense of universality, capturing the essence of shared human experiences while celebrating individuality. Their commitment to continuous growth and innovation is evident in their exploration of mixed media techniques, layering paints to create visual depth and intricate interplays of light, shadow, and color.</p>
+          <div class="data">
+            <a href="#" class="hire">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .header-content h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .about-us {
+    display: flex;
+    align-items: flex-start;
+    height: calc(100vh - 50px); /* Adjust height to account for header */
+    width: 100%;
+    padding: 90px 0;
+    background: #fff8e7; /* Classic latte background color */
+  }
+  
+  .pic {
+    width: 300px; /* Increased image size */
+    border-radius: 12px;
+    margin-right: 20px; /* Space between image and text */
+    margin-left: -50px; /* Move image towards the left */
+  }
+  
+  .about {
+    width: 1130px;
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .text-container {
+    background-color: rgb(17, 15, 15); /* Background color for text box */
+    padding: 20px; /* Padding around text */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    width: 100%;
+  }
+  
+  .text {
+    max-width: 750px;
+  }
+  
+  .text h2 {
+    color: #fff8e7;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .text h5 {
+    color: #fff8e7;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  span {
+    color: #4070f4;
+  }
+  
+  .text p {
+    color: #fff8e7;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  
+  .data {
+    margin-top: 30px;
+  }
+  
+  .hire {
+    font-size: 18px;
+    background: #4070f4;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: 0.5s;
+  }
+  
+  .hire:hover {
+    background: #000;
+  }
+</style>
+{% endblock %}
