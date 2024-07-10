@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block content %}
-<header class="header">
-  <div class="header-content">
-    <h1>About The Artist</h1>
+<header class="bg-dark py-3">
+  <div class="container px-1 px-lg-2 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-5 fw-bold" style="font-size: 2.5rem; font-family: Arial, sans-serif;">About the Artist</h1>
+      </div>
   </div>
 </header>
 <section class="about-us">
@@ -32,7 +34,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
-  
+
   .header {
     background-color: #333;
     color: #fff;
@@ -40,78 +42,77 @@
     text-align: center;
     width: 100%;
   }
-  
+
   .header-content h1 {
     font-size: 24px;
     font-weight: 500;
   }
-  
+
   .about-us {
     display: flex;
-    align-items: flex-start;
-    height: calc(100vh - 50px); /* Adjust height to account for header */
-    width: 100%;
-    padding: 90px 0;
-    background: #fff8e7; /* Classic latte background color */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #fff8e7;
   }
-  
-  .pic {
-    width: 300px; /* Increased image size */
-    border-radius: 12px;
-    margin-right: 20px; /* Space between image and text */
-    margin-left: -50px; /* Move image towards the left */
-  }
-  
+
   .about {
-    width: 1130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 85%;
     margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
   }
-  
+
+  .pic {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
   .text-container {
-    background-color: rgb(17, 15, 15); /* Background color for text box */
-    padding: 20px; /* Padding around text */
-    border-radius: 10px; /* Rounded corners for the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
     width: 100%;
+    background: none;
+    padding: 20px;
+    text-align: center;
   }
-  
+
   .text {
+    width: 100%;
     max-width: 750px;
   }
-  
+
   .text h2 {
-    color: #fff8e7;
-    font-size: 45px;
+    color: #333;
+    font-size: 36px;
     font-weight: 600;
     margin-bottom: 10px;
   }
-  
+
   .text h5 {
-    color: #fff8e7;
+    color: #333;
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 20px;
   }
-  
+
   span {
     color: #4070f4;
   }
-  
+
   .text p {
-    color: #fff8e7;
+    color: #333;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 1.5;
     letter-spacing: 1px;
+    text-align: left;
   }
-  
+
   .data {
     margin-top: 30px;
   }
-  
+
   .hire {
     font-size: 18px;
     background: #4070f4;
@@ -122,9 +123,32 @@
     border-radius: 6px;
     transition: 0.5s;
   }
-  
+
   .hire:hover {
     background: #000;
+  }
+
+  @media (min-width: 768px) {
+    .about-us {
+      flex-direction: row;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .about {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .pic {
+      margin-right: 20px;
+      margin-left: 0;
+      width: 300px;
+    }
+
+    .text-container {
+      text-align: left;
+    }
   }
 </style>
 {% endblock %}

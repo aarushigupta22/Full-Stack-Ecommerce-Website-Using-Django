@@ -98,15 +98,17 @@ def category(request, foo):
     # Grab the category from the url
     try:
         # Look Up The Category
+        categories = Category.objects.all()
         category = Category.objects.get(name=foo)
         products = Product.objects.filter(category=category)
-        return render(request, 'category.html', {'products':products, 'category':category})
+        return render(request, 'category.html', {'products':products, 'category':category, "categories":categories})
     except:
         messages.success(request, ("That Category Doesn't Exist"))
         return redirect('home')
 def category_summary(request):
+    products=Product.objects.all()
     categories = Category.objects.all()
-    return render(request, 'category_summary.html', {"categories":categories})
+    return render(request, 'category_summary.html', {"categories":categories, 'products':products})
 
 
 
